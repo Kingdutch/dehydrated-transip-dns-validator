@@ -65,7 +65,7 @@ if( $action === "deploy_challenge" )
 
     if ( $found == 0 )
     {
-        $dnsEntries[] = new Transip_DnsEntry("$acmedomain", 300, Transip_DnsEntry::TYPE_TXT, $tokenvalue);
+        $dnsEntries[] = new Transip_DnsEntry("$acmedomain", $ttl, Transip_DnsEntry::TYPE_TXT, $tokenvalue);
     }
 
     try
